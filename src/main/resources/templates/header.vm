@@ -44,8 +44,6 @@ $debugString
 #set ($xmlEncoded_nextpagelabel = $nextpagelabel)
     <link rel="next" href="$xmlEncoded_nextpagelink" />
 #end
-    <link rel="stylesheet" type="text/css" href="${xmlEncoded_server_base}static/includes-css/html_page_styles.css" />
-    <script type="text/javascript" src="${xmlEncoded_server_base}static/includes-scripts/script.js"></script>
   </head>
   <body onload="init();">
     <div id="header">

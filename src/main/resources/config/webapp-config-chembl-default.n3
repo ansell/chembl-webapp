@@ -144,7 +144,7 @@ queryall:errorTemplate "/templates/error.vm" ;
 
 #queryall:indexPageScripts "" ;
 
-queryall:indexPageScriptsLocal "static/includes-scripts/script.js" ;
+#queryall:indexPageScriptsLocal "static/includes-scripts/script.js" ;
 
 #queryall:indexPageStylesheets "" ;
 
@@ -153,9 +153,9 @@ queryall:indexPageScriptsLocal "static/includes-scripts/script.js" ;
 
 #queryall:resultsPageScripts "" ;
 
-queryall:resultsPageScriptsLocal "static/includes-scripts/script.js" ;
+#queryall:resultsPageScriptsLocal "static/includes-scripts/script.js" ;
 
-queryall:resultsPageStylesheetsLocal "static/includes-css/html_page_styles.css" ;
+#queryall:resultsPageStylesheetsLocal "static/includes-css/html_page_styles.css" ;
 
 queryall:shortcutIconPath "static/includes-images/favicon.ico" ;
 
