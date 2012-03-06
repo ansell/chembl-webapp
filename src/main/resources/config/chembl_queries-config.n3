@@ -11,7 +11,7 @@
 # Basic queries
 
 
-chembl_query:construct a queryall_query:Query ;
+chembl_query:construct a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "construct" ;
 	rdfs:comment "Resolves queries using a basic SPARQL Construct query" ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
@@ -27,7 +27,7 @@ chembl_query:construct a queryall_query:Query ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int ;
 	queryall_query:includeQueryType chembl_query:construct .
 
-chembl_query:describe a queryall_query:Query ;
+chembl_query:describe a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "describe" ;
 	rdfs:comment "Resolves queries using a basic SPARQL Describe query" ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
@@ -359,10 +359,10 @@ chembl_query:countlinksbynamespace a queryall_query:Query , queryall_query:Regex
 # Helper queries
 
 
-chembl_query:dummyuniversalfilterquery a queryall_query:Query ;
+chembl_query:dummyuniversalfilterquery a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "dummyuniversalfilterquery" ;
 	rdfs:comment "This query is designed to be used as a dummy, no communication query to provider filtering on entire results pools." ;
-	queryall_query:inputRegex "^.+$" ;
+	queryall_query:inputRegex "^(.+)$" ;
 	queryall_query:templateString "" ;
 	queryall_query:queryUriTemplateString "${defaultHostAddress}${queryString}" ;
 	queryall_query:standardUriTemplateString "${defaultHostAddress}${queryString}" ;
