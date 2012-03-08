@@ -16,8 +16,8 @@ chembl_provider:chembl_farmbio a queryall_provider:Provider , queryall_provider:
 	dc:title "Chembl@Farmbio" ;
 	queryall_provider:resolutionStrategy queryall_provider:proxy ;
 	queryall_provider:resolutionMethod queryall_provider:httppostsparql ;
-	queryall_provider:requiresGraphUri "false"^^xsd:boolean ;
-	queryall_provider:graphUri "" ;
+	queryall_provider:requiresGraphUri "true"^^xsd:boolean ;
+	queryall_provider:graphUri "http://data.kasabi.com/dataset/chembl-rdf/" ;
 	queryall_provider:isDefaultSource "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_provider:endpointUrl "http://rdf.farmbio.uu.se/chembl/sparql" ;
@@ -28,8 +28,8 @@ chembl_provider:chembl2bio2rdf a queryall_provider:Provider , queryall_provider:
 	dc:title "Chembl namespaces translated to Bio2RDF URIs" ;
 	queryall_provider:resolutionStrategy queryall_provider:proxy ;
 	queryall_provider:resolutionMethod queryall_provider:httppostsparql ;
-	queryall_provider:requiresGraphUri "false"^^xsd:boolean ;
-	queryall_provider:graphUri "" ;
+	queryall_provider:requiresGraphUri "true"^^xsd:boolean ;
+	queryall_provider:graphUri "http://data.kasabi.com/dataset/chembl-rdf/" ;
 	queryall_provider:isDefaultSource "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:includeThenExclude ;
 	queryall_provider:endpointUrl "http://rdf.farmbio.uu.se/chembl/sparql" ;

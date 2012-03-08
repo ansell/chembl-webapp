@@ -24,13 +24,13 @@ queryall:userAgent "Chembl" ;
 
 queryall:robotHelpUrl "https://sourceforge.net/apps/mediawiki/bio2rdf/index.php?title=RobotHelp" ;
 
-queryall:projectHomeUri "http://rdf.farmbio.uu.se/chembl/" ;
+queryall:projectHomeUri "http://data.kasabi.com/dataset/chembl-rdf/" ;
 
 queryall:uriPrefix "http://" ;
 
-queryall:hostName "rdf.farmbio.uu.se" ;
+queryall:hostName "data.kasabi.com" ;
 
-queryall:uriSuffix "/chembl/" ;
+queryall:uriSuffix "/dataset/chembl-rdf/" ;
 
 queryall:separator "/" ;
 

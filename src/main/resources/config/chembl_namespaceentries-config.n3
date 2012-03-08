@@ -4,7 +4,7 @@
 @prefix chembl_ns: <http://rdf.farmbio.uu.se/chembl/ns/>.
 
 chembl_ns:chembl_article a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "article" ;
@@ -13,7 +13,7 @@ chembl_ns:chembl_article a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_resource a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "resource" ;
@@ -22,7 +22,7 @@ chembl_ns:chembl_resource a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_journal a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "journal" ;
@@ -31,7 +31,7 @@ chembl_ns:chembl_journal a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_molecule a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "molecule" ;
@@ -40,7 +40,7 @@ chembl_ns:chembl_molecule a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_assay a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "assay" ;
@@ -49,7 +49,7 @@ chembl_ns:chembl_assay a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_activity a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "activity" ;
@@ -58,7 +58,7 @@ chembl_ns:chembl_activity a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_target a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "target" ;
@@ -67,7 +67,7 @@ chembl_ns:chembl_target a queryall_ns:Namespace ;
 	rdfs:comment "" .
 
 chembl_ns:chembl_targettype a queryall_ns:Namespace ;
-    queryall_ns:authority <http://rdf.farmbio.uu.se/chembl/> ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "targetType" ;
