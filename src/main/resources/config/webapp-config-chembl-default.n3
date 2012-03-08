@@ -14,7 +14,7 @@ queryall:projectHomeUrl "http://www.farmbio.uu.se/home/chembl" ;
 
 queryall:projectName "Chembl" ;
 
-queryall:applicationHelpUrl "http://github.com/ansell/chembl-webapp/" ;
+queryall:applicationHelpUrl "https://github.com/ansell/chembl-webapp/" ;
 
 queryall:blacklistContactEmailAddress "chembl-rdf@googlegroups.com" ;
 
