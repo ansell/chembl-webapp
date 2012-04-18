@@ -3,7 +3,7 @@
 @prefix queryall_ns: <http://purl.org/queryall/ns:>.
 @prefix chembl_ns: <http://rdf.farmbio.uu.se/chembl/ns/>.
 
-chembl_ns:chembl_article a queryall_ns:Namespace ;
+chembl_ns:chembl_article a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -12,7 +12,7 @@ chembl_ns:chembl_article a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_resource a queryall_ns:Namespace ;
+chembl_ns:chembl_resource a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -21,7 +21,7 @@ chembl_ns:chembl_resource a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_journal a queryall_ns:Namespace ;
+chembl_ns:chembl_journal a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -30,7 +30,7 @@ chembl_ns:chembl_journal a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_molecule a queryall_ns:Namespace ;
+chembl_ns:chembl_molecule a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -39,7 +39,7 @@ chembl_ns:chembl_molecule a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_assay a queryall_ns:Namespace ;
+chembl_ns:chembl_assay a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -48,7 +48,7 @@ chembl_ns:chembl_assay a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_activity a queryall_ns:Namespace ;
+chembl_ns:chembl_activity a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -57,7 +57,7 @@ chembl_ns:chembl_activity a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_target a queryall_ns:Namespace ;
+chembl_ns:chembl_target a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
@@ -66,11 +66,20 @@ chembl_ns:chembl_target a queryall_ns:Namespace ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
 
-chembl_ns:chembl_targettype a queryall_ns:Namespace ;
+chembl_ns:chembl_targettype a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
     queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
     queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
     queryall_ns:separator "/" ;
 	queryall_ns:preferredPrefix "targetType" ;
+	queryall_ns:convertToPreferred "true"^^xsd:boolean ;
+	queryall_ns:identifierRegex "" ;
+	rdfs:comment "" .
+
+chembl_ns:chembl_chemblid a queryall_ns:Namespace , queryall_ns:ValidatingNamespace , queryall_ns:RegexValidatingNamespace ;
+    queryall_ns:authority <http://data.kasabi.com/dataset/chembl-rdf/> ;
+    queryall_ns:uriTemplate "${authority}${namespace}${separator}${identifier}" ;
+    queryall_ns:separator "/" ;
+	queryall_ns:preferredPrefix "chemblid" ;
 	queryall_ns:convertToPreferred "true"^^xsd:boolean ;
 	queryall_ns:identifierRegex "" ;
 	rdfs:comment "" .
