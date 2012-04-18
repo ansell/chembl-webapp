@@ -50,6 +50,7 @@ chembl_query:describe a queryall_query:Query , queryall_query:RegexInputQuery , 
 chembl_query:primaryreverseconstructfromdoi a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "primaryreverseconstructfromdoi" ;
 	rdfs:comment "Resolves queries using a doi literal, identified using the BIBO:doi predicate." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "false"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -68,6 +69,7 @@ chembl_query:primaryreverseconstructfromdoi a queryall_query:Query , queryall_qu
 chembl_query:primaryreverseconstruct a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "primaryreverseconstruct" ;
 	rdfs:comment "Resolves queries using the object position of an RDF triple to identify relevant subject resources." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -85,6 +87,7 @@ chembl_query:primaryreverseconstruct a queryall_query:Query , queryall_query:Reg
 chembl_query:primaryreverseconstructfromblueobeliskinchikey a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "primaryreverseconstructfromblueobeliskinchikey" ;
 	rdfs:comment "Resolves queries using the object position of an RDF triple to identify resources containing the given InChI key, using the BlueObelisk:inchikey predicate." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "false"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -103,6 +106,7 @@ chembl_query:primaryreverseconstructfromblueobeliskinchikey a queryall_query:Que
 chembl_query:primaryreverseconstructfromblueobeliskinchi a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "primaryreverseconstructfromblueobeliskinchi" ;
 	rdfs:comment "Resolves queries using the object position of an RDF triple to identify resources containing the given InChI, using the BlueObelisk:inchi predicate." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "false"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -125,6 +129,7 @@ chembl_query:primaryreverseconstructfromblueobeliskinchi a queryall_query:Query 
 chembl_query:labelsearch a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "label" ;
 	rdfs:comment "Performs a quick search for labels for the given resource and returns triples for any labels that exist based on standard predicates such as DC:title and RDFS:label." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -229,6 +234,7 @@ chembl_query:htmlendpoint a queryall_query:Query , queryall_query:RegexInputQuer
 chembl_query:virtuosobifcontainsquicksearchbynamespace a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "virtuosobifcontainsquicksearchbynamespace" ;
 	rdfs:comment "A quick search for a given piece of text in the given namespace using the Virtuoso specific bif:contains predicate." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -247,6 +253,7 @@ chembl_query:virtuosobifcontainsquicksearchbynamespace a queryall_query:Query , 
 chembl_query:virtuosobifcontainssearchbynamespace a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "virtuosobifcontainssearchbynamespace" ;
 	rdfs:comment "A longer search for a given piece of text in the given namespace using the Virtuoso specific bif:contains predicate." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -269,6 +276,7 @@ chembl_query:virtuosobifcontainssearchbynamespace a queryall_query:Query , query
 chembl_query:links a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "links" ;
 	rdfs:comment "Searches for all links to a given resource, including a label for any links that are found to enable easy browsing of the results." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "false"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -286,6 +294,7 @@ chembl_query:links a queryall_query:Query , queryall_query:RegexInputQuery , que
 chembl_query:linksbynamespace a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "linksns" ;
 	rdfs:comment "Searches for links to a given resource from the given namespace, including a label for any links that are found to enable easy browsing of the results." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -302,6 +311,7 @@ chembl_query:linksbynamespace a queryall_query:Query , queryall_query:RegexInput
 chembl_query:linkstonamespace a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "linkstonamespace" ;
 	rdfs:comment "Finds links from the given resource to the given namespace." ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
@@ -368,6 +378,7 @@ chembl_query:dummyuniversalfilterquery a queryall_query:Query , queryall_query:R
 	queryall_query:standardUriTemplateString "${defaultHostAddress}${queryString}" ;
 	queryall_query:outputRdfXmlString "" ;
     queryall_query:isDummyQueryType "true"^^xsd:boolean ;
+    queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude .
 
 chembl_query:unknownnamespace a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
