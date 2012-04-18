@@ -19,10 +19,10 @@ chembl_query:construct a queryall_query:Query , queryall_query:RegexInputQuery ,
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> ?p ?o . } WHERE { ${graphStart} <${inputUrlEncoded_endpointSpecificUri}> ?p ?o . ${graphEnd}  } ${limit} ${sparqlOffset}" ;
+	queryall_query:templateString "CONSTRUCT { <${normalisedStandardUri}> ?p ?o . } WHERE { ${graphStart} <${endpointSpecificUri}> ?p ?o . ${graphEnd}  } ${limit} ${sparqlOffset}" ;
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
-	queryall_query:outputRdfXmlString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfXmlString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int ;
@@ -35,10 +35,10 @@ chembl_query:describe a queryall_query:Query , queryall_query:RegexInputQuery , 
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^([\\w-]+)/(.+)" ;
-	queryall_query:templateString "DESCRIBE <${inputUrlEncoded_endpointSpecificUri}> ${limit} ${sparqlOffset}" ;
+	queryall_query:templateString "DESCRIBE <${endpointSpecificUri}> ${limit} ${sparqlOffset}" ;
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
-	queryall_query:outputRdfXmlString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfXmlString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int ;
@@ -61,7 +61,7 @@ chembl_query:primaryreverseconstructfromdoi a queryall_query:Query , queryall_qu
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int ;
@@ -75,11 +75,11 @@ chembl_query:primaryreverseconstruct a queryall_query:Query , queryall_query:Reg
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> <http://bio2rdf.org/bio2rdf_resource:linkedToFrom> ?s . } WHERE { ${graphStart} ?s ?p <${inputUrlEncoded_endpointSpecificUri}> . ${graphEnd}  } ${limit} ${sparqlOffset}" ;
+	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> <http://bio2rdf.org/bio2rdf_resource:linkedToFrom> ?s . } WHERE { ${graphStart} ?s ?p <${endpointSpecificUri}> . ${graphEnd}  } ${limit} ${sparqlOffset}" ;
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int ;
@@ -93,11 +93,11 @@ chembl_query:primaryreverseconstructfromblueobeliskinchikey a queryall_query:Que
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> <http://bio2rdf.org/bio2rdf_resource:linkedToFrom> ?s . ?s ?p ?o} WHERE { ${graphStart} ?s <http://www.blueobelisk.org/chemistryblogs/inchikey> ?inchikey . FILTER(REGEX(?inchikey, \"${urlEncoded_input_2}\")) . ?s ?p ?o . ${graphEnd}  } ${limit} ${sparqlOffset}" ;
+	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> <http://bio2rdf.org/bio2rdf_resource:linkedToFrom> ?s . ?s ?p ?o} WHERE { ${graphStart} ?s <http://www.blueobelisk.org/chemistryblogs/inchikey> ?inchikey . FILTER(REGEX(?inchikey, \"${input_2}\")) . ?s ?p ?o . ${graphEnd}  } ${limit} ${sparqlOffset}" ;
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:namespaceToHandle chembl_ns:inchikey ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
@@ -116,7 +116,7 @@ chembl_query:primaryreverseconstructfromblueobeliskinchi a queryall_query:Query 
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${plusUrlEncoded_input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:sameAs xmlns:ns0pred=\"http://www.w3.org/2002/07/owl#\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_endpointSpecificUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:namespaceToHandle chembl_ns:inchi ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
@@ -139,7 +139,7 @@ chembl_query:labelsearch a queryall_query:Query , queryall_query:RegexInputQuery
 	queryall_query:queryUriTemplateString "${authority}label/${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:hasLabelSearch xmlns:ns0pred=\"${xmlEncoded_defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:hasLabelSearch xmlns:ns0pred=\"${xmlEncoded_defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int .
@@ -178,7 +178,7 @@ chembl_query:licenseendpoint a queryall_query:Query , queryall_query:RegexInputQ
 	queryall_query:queryUriTemplateString "${authority}license/${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:rights xmlns:ns0pred=\"http://purl.org/dc/terms/\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:rights xmlns:ns0pred=\"http://purl.org/dc/terms/\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
@@ -201,7 +201,7 @@ chembl_query:htmlredirect a queryall_query:Query , queryall_query:RegexInputQuer
 	queryall_query:queryUriTemplateString "${authority}html/${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:url xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\">${xmlEncoded_endpointUrl}</ns0pred:url></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:url xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\">${xmlEncoded_endpointUrl}</ns0pred:url></rdf:Description>" ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
@@ -220,7 +220,7 @@ chembl_query:htmlendpoint a queryall_query:Query , queryall_query:RegexInputQuer
 	queryall_query:queryUriTemplateString "${authority}html/${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:urlList xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"></ns0pred:urlList></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:urlList xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"></ns0pred:urlList></rdf:Description>" ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
@@ -240,11 +240,11 @@ chembl_query:virtuosobifcontainsquicksearchbynamespace a queryall_query:Query , 
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^quicksearchns/([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedQueryUri}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/bio2rdf_resource:SearchResults> . <${inputUrlEncoded_normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasSearchResult> ?s .  <${inputUrlEncoded_normalisedQueryUri}> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?s . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://purl.org/dc/terms/title> ?dctermstitle . ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . ?s ?p ?o .  } WHERE { ${graphStart} ?s ?p ?o . FILTER(bif:contains(?o, '\"${ntriplesEncoded_input_2}\"')) OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . }  OPTIONAL{ ?s <http://purl.org/dc/terms/title> ?dctermstitle . }  OPTIONAL{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd} } ${quicklimit} ${sparqlOffset}" ;
-	queryall_query:queryUriTemplateString "${authority}quicksearchns/${urlEncoded_input_1}/${urlEncoded_input_2}" ;
-	queryall_query:standardUriTemplateString "${authority}quicksearchns/${urlEncoded_input_1}/${urlEncoded_input_2}" ;
+	queryall_query:templateString "CONSTRUCT { <${normalisedQueryUri}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/bio2rdf_resource:SearchResults> . <${normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasSearchResult> ?s .  <${normalisedQueryUri}> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?s . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://purl.org/dc/terms/title> ?dctermstitle . ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . ?s ?p ?o .  } WHERE { ${graphStart} ?s ?p ?o . FILTER(bif:contains(?o, '\"${ntriplesEncoded_input_2}\"')) OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . }  OPTIONAL{ ?s <http://purl.org/dc/terms/title> ?dctermstitle . }  OPTIONAL{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd} } ${quicklimit} ${sparqlOffset}" ;
+	queryall_query:queryUriTemplateString "${authority}quicksearchns/${input_1}/${input_2}" ;
+	queryall_query:standardUriTemplateString "${authority}quicksearchns/${input_1}/${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:hasGlobalSearch xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}search/${xmlEncoded_urlEncoded_input_2}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:hasGlobalSearch xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}search/${xmlEncoded_urlEncoded_input_2}\"/></rdf:Description>" ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
@@ -259,11 +259,11 @@ chembl_query:virtuosobifcontainssearchbynamespace a queryall_query:Query , query
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^searchns/([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedQueryUri}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/bio2rdf_resource:SearchResults> . <${inputUrlEncoded_normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasSearchResult> ?s .  <${inputUrlEncoded_normalisedQueryUri}> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?s . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://purl.org/dc/terms/title> ?dctermstitle . ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . ?s ?p ?o .  } WHERE { ${graphStart} ?s ?p ?o . FILTER(bif:contains(?o, '\"${ntriplesEncoded_input_2}\"')) OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . }  OPTIONAL{ ?s <http://purl.org/dc/terms/title> ?dctermstitle . }  OPTIONAL{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd} } ${limit} ${sparqlOffset}" ;
-	queryall_query:queryUriTemplateString "${authority}searchns/${urlEncoded_input_1}/${urlEncoded_input_2}" ;
-	queryall_query:standardUriTemplateString "${authority}searchns/${urlEncoded_input_1}/${urlEncoded_input_2}" ;
+	queryall_query:templateString "CONSTRUCT { <${normalisedQueryUri}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/bio2rdf_resource:SearchResults> . <${normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasSearchResult> ?s .  <${normalisedQueryUri}> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?s . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://purl.org/dc/terms/title> ?dctermstitle . ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . ?s ?p ?o .  } WHERE { ${graphStart} ?s ?p ?o . FILTER(bif:contains(?o, '\"${ntriplesEncoded_input_2}\"')) OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . }  OPTIONAL{ ?s <http://purl.org/dc/terms/title> ?dctermstitle . }  OPTIONAL{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd} } ${limit} ${sparqlOffset}" ;
+	queryall_query:queryUriTemplateString "${authority}searchns/${input_1}/${input_2}" ;
+	queryall_query:standardUriTemplateString "${authority}searchns/${input_1}/${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:hasGlobalSearch xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}search/${xmlEncoded_urlEncoded_input_2}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:hasGlobalSearch xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}search/${xmlEncoded_urlEncoded_input_2}\"/></rdf:Description>" ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
@@ -282,11 +282,11 @@ chembl_query:links a queryall_query:Query , queryall_query:RegexInputQuery , que
 	queryall_query:isNamespaceSpecific "false"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^links/([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { ?s ?p <${inputUrlEncoded_normalisedStandardUri}> . ?s a ?linkedRecordType . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } WHERE {  ${graphStart}  ?s ?p <${inputUrlEncoded_endpointSpecificUri}> . OPTIONAL { ?s a ?linkedRecordType . } OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd}  } ${limit} ${sparqlOffset}" ;
+	queryall_query:templateString "CONSTRUCT { ?s ?p <${inputUrlEncoded_normalisedStandardUri}> . ?s a ?linkedRecordType . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } WHERE {  ${graphStart}  ?s ?p <${endpointSpecificUri}> . OPTIONAL { ?s a ?linkedRecordType . } OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd}  } ${limit} ${sparqlOffset}" ;
 	queryall_query:queryUriTemplateString "${authority}links/${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:xLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:xLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int ;
@@ -300,11 +300,11 @@ chembl_query:linksbynamespace a queryall_query:Query , queryall_query:RegexInput
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^linksns/([\\w-]+)/([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { ?s ?p <${inputUrlEncoded_normalisedStandardUri}> . ?s a ?linkedRecordType . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } WHERE {  ${graphStart}  ?s ?p <${inputUrlEncoded_endpointSpecificUri}> . OPTIONAL { ?s a ?linkedRecordType . } OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd}  } ${limit} ${sparqlOffset}" ; 
+	queryall_query:templateString "CONSTRUCT { ?s ?p <${inputUrlEncoded_normalisedStandardUri}> . ?s a ?linkedRecordType . ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . ?s <http://purl.org/dc/elements/1.1/title> ?title . ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } WHERE {  ${graphStart}  ?s ?p <${endpointSpecificUri}> . OPTIONAL { ?s a ?linkedRecordType . } OPTIONAL { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label . } OPTIONAL { ?s <http://purl.org/dc/elements/1.1/title> ?title . } OPTIONAL { ?s <http://www.w3.org/2004/02/skos/core#prefLabel> ?skoslabel . } ${graphEnd}  } ${limit} ${sparqlOffset}" ; 
 	queryall_query:queryUriTemplateString "${authority}linksns/${input_1}/${input_2}${separator}${input_3}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_2}${separator}${input_3}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:xNamespaceLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/><ns0pred:xCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}links/${xmlEncoded_urlEncoded_input_2}:${xmlEncoded_urlEncoded_input_3}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:xNamespaceLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/><ns0pred:xCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}links/${xmlEncoded_urlEncoded_input_2}${separator}${xmlEncoded_urlEncoded_input_3}\"/></rdf:Description>" ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int , "2"^^xsd:int ;
 	queryall_query:hasNamespaceInputIndex "1"^^xsd:int .
@@ -318,11 +318,11 @@ chembl_query:linkstonamespace a queryall_query:Query , queryall_query:RegexInput
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:inputRegex "^linkstonamespace/([\\w-]+)/([\\w-]+)/(.+)" ;
 #TODO: Add a strstarts SPARQL 1.1 version of this query that will ideally be more efficient than this.
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> ?p ?o . } WHERE { ${graphStart} <${inputUrlEncoded_endpointSpecificUri}> ?p ?o . FILTER ( isUri(?o) && regex( str(?o), \"${inputUrlEncoded_endpointSpecificQueryUri}\" ) ) ${graphEnd} } ${limit} ${sparqlOffset}" ;
+	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedStandardUri}> ?p ?o . } WHERE { ${graphStart} <${endpointSpecificUri}> ?p ?o . FILTER ( isUri(?o) && regex( str(?o), \"${inputUrlEncoded_endpointSpecificQueryUri}\" ) ) ${graphEnd} } ${limit} ${sparqlOffset}" ;
 	queryall_query:queryUriTemplateString "${authority}${input_1}${separator}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_2}${separator}${input_3}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:xLinksToNamespace xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}linkstonamespace/${xmlEncoded_urlEncoded_input_1}/${xmlEncoded_urlEncoded_input_2}${defaultSeparator}${xmlEncoded_urlEncoded_input_3}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:xLinksToNamespace xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}linkstonamespace/${xmlEncoded_urlEncoded_input_1}/${xmlEncoded_urlEncoded_input_2}${defaultSeparator}${xmlEncoded_urlEncoded_input_3}\"/></rdf:Description>" ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_query:hasPublicIdentifierIndex "1"^^xsd:int , "2"^^xsd:int ;
@@ -334,11 +334,11 @@ chembl_query:countlinks a queryall_query:Query , queryall_query:RegexInputQuery 
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "false"^^xsd:boolean ;
 	queryall_query:inputRegex "^countlinks/([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasLinkCountResult> <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}:${urlEncoded_input_2}> . <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}:${urlEncoded_input_2}> <http://bio2rdf.org/bio2rdf_resource:sparqlEndpointUrl> <${endpointUrl}> .  <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}:${urlEncoded_input_2}> <http://bio2rdf.org/bio2rdf_resource:sparqlGraphUri> \"${graphUri}\" . <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}:${urlEncoded_input_2}> <http://bio2rdf.org/bio2rdf_resource:hasLinkCount> `(select (count(?s)) as ?countS where { ${graphStart} ?s ?p <${inputUrlEncoded_endpointSpecificUri}> . ${graphEnd} })` } where { ?s1 ?p1 ?o1 } limit 1" ;
+	queryall_query:templateString "CONSTRUCT { <${normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasLinkCountResult> <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}${separator}${input_2}> . <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}${separator}${input_2}> <http://bio2rdf.org/bio2rdf_resource:sparqlEndpointUrl> <${endpointUrl}> .  <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}${separator}${input_2}> <http://bio2rdf.org/bio2rdf_resource:sparqlGraphUri> \"${graphUri}\" . <${defaultHostAddress}linkresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_1}${separator}${input_2}> <http://bio2rdf.org/bio2rdf_resource:hasLinkCount> `(select (count(?s)) as ?countS where { ${graphStart} ?s ?p <${endpointSpecificUri}> . ${graphEnd} })` } where { ?s1 ?p1 ?o1 } limit 1" ;
 	queryall_query:queryUriTemplateString "${authority}countlinks/${input_1}${separator}${input_2}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_1}${separator}${input_2}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:xCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:xCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/></rdf:Description>" ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
@@ -354,11 +354,11 @@ chembl_query:countlinksbynamespace a queryall_query:Query , queryall_query:Regex
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
 	queryall_query:includeDefaults "false"^^xsd:boolean ;
 	queryall_query:inputRegex "^countlinksns/([\\w-]+)/([\\w-]+)/(.+)" ;
-	queryall_query:templateString "CONSTRUCT { <${inputUrlEncoded_normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasNamespaceLinkCountResult> <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}:${urlEncoded_input_3}> . <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}:${urlEncoded_input_3}> <http://bio2rdf.org/bio2rdf_resource:sparqlEndpointUrl> <${endpointUrl}> .  <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}:${urlEncoded_input_3}> <http://bio2rdf.org/bio2rdf_resource:linksFromNamespace> <${defaultHostAddress}ns:${urlEncoded_input_1}> .  <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}:${urlEncoded_input_3}> <http://bio2rdf.org/bio2rdf_resource:sparqlGraphUri> \"${graphUri}\" .  <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}:${urlEncoded_input_3}> <http://bio2rdf.org/bio2rdf_resource:hasLinkCount> `(select (count(?s)) as ?countS where { ${graphStart} ?s ?p <${inputUrlEncoded_endpointSpecificUri}> . ${graphEnd} })` } where { ?s1 ?p1 ?o1 } limit 1" ;
+	queryall_query:templateString "CONSTRUCT { <${normalisedQueryUri}> <http://bio2rdf.org/bio2rdf_resource:hasNamespaceLinkCountResult> <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}${separator}${input_3}> . <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}${separator}${input_3}> <http://bio2rdf.org/bio2rdf_resource:sparqlEndpointUrl> <${endpointUrl}> .  <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}${separator}${input_3}> <http://bio2rdf.org/bio2rdf_resource:linksFromNamespace> <${defaultHostAddress}ns:${urlEncoded_input_1}> .  <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}${separator}${input_3}> <http://bio2rdf.org/bio2rdf_resource:sparqlGraphUri> \"${graphUri}\" .  <${defaultHostAddress}linknsresultref/${urlEncoded_endpointUrl}/${urlEncoded_graphUri}/${urlEncoded_input_2}${separator}${input_3}> <http://bio2rdf.org/bio2rdf_resource:hasLinkCount> `(select (count(?s)) as ?countS where { ${graphStart} ?s ?p <${endpointSpecificUri}> . ${graphEnd} })` } where { ?s1 ?p1 ?o1 } limit 1" ;
 	queryall_query:queryUriTemplateString "${authority}countlinksns/${input_1}/${input_2}${separator}${input_3}" ;
 	queryall_query:standardUriTemplateString "${authority}${input_2}${separator}${input_3}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:xNamespaceCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/><ns0pred:xCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}countlinks/${xmlEncoded_urlEncoded_input_2}:${xmlEncoded_urlEncoded_input_3}\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:xNamespaceCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/><ns0pred:xCountLinks xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${defaultHostAddress}countlinks/${xmlEncoded_urlEncoded_input_2}${separator}${xmlEncoded_urlEncoded_input_3}\"/></rdf:Description>" ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
@@ -393,7 +393,7 @@ chembl_query:unknownnamespace a queryall_query:Query , queryall_query:RegexInput
 	queryall_query:queryUriTemplateString "${defaultHostAddress}${queryString}" ;
 	queryall_query:standardUriTemplateString "${defaultHostAddress}${queryString}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:Error\"/><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:UnknownNamespaceForThisQueryError\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:Error\"/><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:UnknownNamespaceForThisQueryError\"/></rdf:Description>" ;
     queryall_query:isDummyQueryType "true"^^xsd:boolean ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
@@ -413,7 +413,7 @@ chembl_query:unknownquery a queryall_query:Query , queryall_query:RegexInputQuer
 	queryall_query:queryUriTemplateString "${defaultHostAddress}${queryString}" ;
 	queryall_query:standardUriTemplateString "${defaultHostAddress}${queryString}" ;
 	queryall_query:outputRdfFormat "application/rdf+xml" ;
-	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_inputUrlEncoded_normalisedStandardUri}\"><ns0pred:containsUnknownQuery xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_inputUrlEncoded_normalisedQueryUri}\"/><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:Error\"/><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:UnknownQueryError\"/></rdf:Description>" ;
+	queryall_query:outputRdfString "<rdf:Description rdf:about=\"${xmlEncoded_normalisedStandardUri}\"><ns0pred:containsUnknownQuery xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"${xmlEncoded_normalisedQueryUri}\"/><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:Error\"/><rdf:type xmlns:ns0pred=\"${defaultHostAddress}bio2rdf_resource:\" rdf:resource=\"http://bio2rdf.org/bio2rdf_resource:UnknownQueryError\"/></rdf:Description>" ;
     queryall_query:isDummyQueryType "true"^^xsd:boolean ;
     queryall_query:isPageable "false"^^xsd:boolean ;
 	queryall_query:inRobotsTxt "true"^^xsd:boolean ;
