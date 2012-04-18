@@ -14,6 +14,7 @@
 chembl_query:construct a queryall_query:Query , queryall_query:RegexInputQuery , queryall_query:SparqlProcessorQuery , queryall_query:RdfOutputQuery ;
 	dc:title "construct" ;
 	rdfs:comment "Resolves queries using a basic SPARQL Construct query" ;
+    queryall_query:isPageable "true"^^xsd:boolean ;
 	queryall_query:handleAllNamespaces "true"^^xsd:boolean ;
 	queryall_query:isNamespaceSpecific "true"^^xsd:boolean ;
 	queryall_query:namespaceMatchMethod queryall_query:namespaceMatchAny ;
