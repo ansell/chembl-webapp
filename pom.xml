@@ -5,7 +5,7 @@
 	<groupId>com.github</groupId>
 	<artifactId>chembl-webapp</artifactId>
 	<packaging>war</packaging>
-	<version>1.3.1-SNAPSHOT</version>
+	<version>1.3.1</version>
 	<name>Chembl Webapp</name>
 	<url>https://github.com/ansell/chembl-webapp</url>
 	<inceptionYear>2009</inceptionYear>
@@ -39,8 +39,11 @@
 		<sesame.version>2.6.5</sesame.version>
 		<sesametools.version>1.6</sesametools.version>
 		<slf4j.version>1.6.4</slf4j.version>
-		<queryall.version>1.3.1-SNAPSHOT</queryall.version>
+		<queryall.version>1.3.1</queryall.version>
 	</properties>
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
 	<scm>
 		<connection>scm:git:git://github.com/ansell/chembl-webapp</connection>
 		<developerConnection>scm:git:ssh://git@github.com:ansell/chembl-webapp</developerConnection>
