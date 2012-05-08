@@ -163,12 +163,12 @@
 	
 	<rule>
 		<from>^/download</from>
-		<to type="redirect">http://download.bio2rdf.org/</to>
+		<to type="redirect">http://data.kasabi.com/dataset/chembl-rdf</to>
 	</rule>
 	
 	<rule>
 		<from>^/sparql</from>
-		<to type="redirect">http://quebec.bio2rdf.org/sparql</to>
+		<to type="redirect">http://rdf.farmbio.uu.se/chembl/sparql</to>
 	</rule>
 
     <rule>

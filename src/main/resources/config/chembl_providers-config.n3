@@ -21,8 +21,8 @@ chembl_provider:chembl_farmbio a queryall_provider:Provider , queryall_provider:
 	queryall_provider:isDefaultSource "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:excludeThenInclude ;
 	queryall_provider:endpointUrl "http://rdf.farmbio.uu.se/chembl/sparql" ;
-	queryall_provider:handlesNamespace chembl_ns:chembl_resource , chembl_ns:chembl_target , chembl_ns:chembl_targettype , chembl_ns:chembl_activity , chembl_ns:chembl_assay , chembl_ns:chembl_molecule , chembl_ns:chembl_journal , chembl_ns:chembl_article ;
-	queryall_provider:includedInQuery chembl_query:construct , chembl_query:describe .
+	queryall_provider:handlesNamespace chembl_ns:chembl_resource , chembl_ns:chembl_target , chembl_ns:chembl_targettype , chembl_ns:chembl_activity , chembl_ns:chembl_assay , chembl_ns:chembl_molecule , chembl_ns:chembl_journal , chembl_ns:chembl_article , chembl_ns:chembl_chemblid ;
+	queryall_provider:includedInQuery chembl_query:construct , chembl_query:describe , chembl_query:sparql11strcontainssearch , chembl_query:sparql11strcontainsquicksearch , chembl_query:sparql11strcontainsquicksearchbynamespace , chembl_query:sparql11strcontainssearchbynamespace .
 
 chembl_provider:chembl2bio2rdf a queryall_provider:Provider , queryall_provider:HttpProvider , queryall_provider:SparqlProvider ;
 	dc:title "Chembl namespaces translated to Bio2RDF URIs" ;
@@ -33,7 +33,7 @@ chembl_provider:chembl2bio2rdf a queryall_provider:Provider , queryall_provider:
 	queryall_provider:isDefaultSource "true"^^xsd:boolean ;
 	queryall_profile:profileIncludeExcludeOrder queryall_profile:includeThenExclude ;
 	queryall_provider:endpointUrl "http://rdf.farmbio.uu.se/chembl/sparql" ;
-	queryall_provider:handlesNamespace chembl_ns:chembl_resource , chembl_ns:chembl_target , chembl_ns:chembl_targettype , chembl_ns:chembl_activity , chembl_ns:chembl_assay , chembl_ns:chembl_molecule , chembl_ns:chembl_journal , chembl_ns:chembl_article ;
+	queryall_provider:handlesNamespace chembl_ns:chembl_resource , chembl_ns:chembl_target , chembl_ns:chembl_targettype , chembl_ns:chembl_activity , chembl_ns:chembl_assay , chembl_ns:chembl_molecule , chembl_ns:chembl_journal , chembl_ns:chembl_article , chembl_ns:chembl_chemblid ;
 	queryall_provider:includedInQuery chembl_query:construct ;
 	queryall_provider:needsRdfNormalisation bio2rdf_rdfrule:farmbiochemblresource , bio2rdf_rdfrule:farmbiochemblmolecule , bio2rdf_rdfrule:farmbiochemblassay , bio2rdf_rdfrule:farmbiochembltarget , bio2rdf_rdfrule:farmbiochembltargettype , bio2rdf_rdfrule:farmbiochemblactivity , bio2rdf_rdfrule:wwwbio2rdf , bio2rdf_rdfrule:taxonomy2taxon .
 	
